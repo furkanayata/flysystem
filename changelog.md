@@ -1,5 +1,102 @@
 # Changelog
 
+## 1.0.41 - 2017-08-06
+
+### Fixed
+
+* Response array check mistake was corrected.
+
+### Altered
+
+* Removed support for HHVM.
+
+## 1.0.40 - 2017-04-28
+
+### Improved
+
+* Made it possible to indicate an adapter can ovewrite files using the write functions rather than the update ones.
+
+## 1.0.39 - 2017-04-25
+
+### Fixed
+
+* Some FTP servers return the `total` of 0 when a file doesn't exist instead of saying it doesn't exist.
+
+## 1.0.38 - 2017-04-22
+
+### Fixed
+
+* Pure-FTPd now escapes the first call to rawlist too.
+
+### Improved
+
+* You can now optionally put the FTP adapter in `utf8`-mode by setting the `utf8` setting to `true`.
+
+## 1.0.37 - 2017-03-22
+
+### Fixed
+
+* Space escaping for Pure-FTPd in the FTP adapter.
+
+## 1.0.36 - 2017-03-18
+
+### Fixed
+
+* Ensure an FTP connection is still a resource before closing it.
+* Made return values of some internal adapters consistent.
+* Made 0 a valid FTP username.
+* Docblock class reference fixes.
+* Created a more specific exception for when a mount manage is not found (with BC).
+
+## 1.0.35 - 2017-02-09
+
+### Fixed
+
+* Creating a directory in FTP checked whether a directory already existed, the check was not strict enough.
+
+## 1.0.34 - 2017-01-30
+
+### Fixed
+
+* Account for a Finfo buffer error which causes an array to string conversion.
+* Simplified path handling for Windows.
+
+## 1.0.33 - 2017-01-23
+
+### Fixed
+
+* Path traversing possibility on Windows.
+
+## 1.0.32 - 2016-10-19
+
+### Fixed
+
+* Fixed listings on windows.
+
+## 1.0.31 - 2016-10-19
+
+### Fixed
+
+* Relative path resolving was too greedy.
+
+## 1.0.30 - 2016-10-18
+
+### Altered
+
+* Lowered minimum PHP version to 5.5.9
+
+## 1.0.29 - 2016-10-18
+
+### Improved
+
+* All FTP-like adapters now have a safe storage for usernames and passwords.
+
+## 1.0.28 - 2016-10-07
+
+### Fixed
+
+* [#705] Config::has now also checks the fallback config.
+
 ## 1.0.27 - 2016-08-10
 
 ### Fixed
@@ -121,7 +218,7 @@
 
 ### Fixed
 
-* [Filesystem::listContents] This function now uses DIRECTORY_SEPARATOR when the local adapter is used. 
+* [Filesystem::listContents] This function now uses DIRECTORY_SEPARATOR when the local adapter is used.
 
 ## 1.0.8 - 2015-07-12
 
